@@ -10,6 +10,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "dblue":"#1c4670",
+        "dyellow":"#ffa229",
+        "dpurple":"#1d4771",
       },
     },
   },
