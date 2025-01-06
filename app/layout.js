@@ -1,5 +1,10 @@
-import "./globals.css";
+import './globals.css';
 
+
+export const metadata = {
+  title: 'company-info',
+  description: 'company-info',
+};
 
 export default function RootLayout({
   children,
@@ -7,8 +12,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );
 }
+
