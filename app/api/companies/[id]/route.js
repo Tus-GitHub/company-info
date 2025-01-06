@@ -1,10 +1,18 @@
 'use server';
 
+<<<<<<< HEAD
 import { query } from "@/app/lib/db";
 
 export async function GET(request, context) {
   try {
     const { id } = await context.params;
+=======
+import { query } from "@/app/lib/db"; // Adjust the path if necessary
+
+export async function GET(request, context) {
+  try {
+    const { id } = await context.params; // Await to properly access params
+>>>>>>> bd5de844634343ec74ceae59d9b67d59c01744f0
 
     if (!id) {
       return new Response(
@@ -27,6 +35,10 @@ export async function GET(request, context) {
     const company = companyResult.rows[0];
     const directors = directorsResult.rows.map((row) => row.name);
 
+<<<<<<< HEAD
+=======
+    // Combine company description and directors into a single array
+>>>>>>> bd5de844634343ec74ceae59d9b67d59c01744f0
     const responseData = [
       {
         description: company.description,
@@ -45,4 +57,8 @@ export async function GET(request, context) {
       { status: 500, headers: { "Content-Type": "application/json" } }
     );
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> bd5de844634343ec74ceae59d9b67d59c01744f0
