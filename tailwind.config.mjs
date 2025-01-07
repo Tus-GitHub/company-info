@@ -13,9 +13,8 @@ export default {
         "dblue":"#1c4670",
         "dyellow":"#ffa229",
         "dpurple":"#1d4771",
-      },
-      backgroundImage: {
-        'footer-texture': "url('/Screenshot 2025-01-07 050652.png')",
+        "lgrey":"#fafafa",
+        "lslate":"#2a303a",
       },
     },
   },

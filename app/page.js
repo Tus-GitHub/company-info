@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image'
+import { LuMonitorCog } from "react-icons/lu";
 import { useState, useEffect, useCallback } from 'react';
 
 export default function Home() {
@@ -162,6 +162,52 @@ export default function Home() {
             </div>
           )}
         </div>
+      </div>
+      <div className='bg-lgrey flex flex-col  items-center mt-24 pt-10 gap-y-12'>
+          <p className='uppercase text-dyellow text-lg'>welcome to registerkaro.in</p>
+          <p className='md:text-4xl text-2xl font-bold text-lslate'>Explore Our Services</p>
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-x-52 gap-y-24">
+            <div className="p-4 flex flex-col justify-center items-center">
+              <LuMonitorCog  className="text-5xl text-dyellow"/>
+              <p className="text-xl font-bold py-6">Company Formation</p>
+              <p className="pb-6 text-lg font-light text-center">Build web-based solution that<br></br> enhance customer experience.</p>
+              <button className="font-medium text-lslate">Learn more -</button>
+            </div>
+            <div className="p-4 flex flex-col justify-center items-center">
+              <LuMonitorCog  className="text-5xl text-dyellow"/>
+              <p className="text-xl font-bold py-6">Company Secretarial Services</p>
+              <p className="pb-6 text-lg font-light text-center">Make data-driven decisions and<br></br>utilize technology to reach<br></br>business goals.</p>
+              <button className="font-medium text-lslate">Learn more -</button>
+            </div>
+            <div className="p-4 flex flex-col justify-center items-center">
+              <LuMonitorCog  className="text-5xl text-dyellow"/>
+              <p className="text-xl font-bold py-6">Virtual Office Address</p>
+              <p className="pb-6 text-lg font-light text-center">Foster customer relationship by<br></br> effectively serving your market.</p>
+              <button className="font-medium text-lslate">Learn more -</button>
+            </div>
+            <div className="p-4 flex flex-col justify-center items-center">
+              <LuMonitorCog  className="text-5xl text-dyellow"/>
+              <p className="text-xl font-bold py-6">Annual Compliance Services</p>
+              <p className="pb-6 text-lg font-light text-center">Turn your ideas into modern<br></br> products with our design experts.</p>
+              <button className="font-medium text-lslate">Learn more -</button>
+            </div>
+            <div className="p-4 flex flex-col justify-center items-center">
+              <LuMonitorCog  className="text-5xl text-dyellow"/>
+              <p className="text-xl font-bold py-6">Payroll Services</p>
+              <p className="pb-6 text-lg font-light text-center">Expand your business across the<br></br>globe with minimal effort.</p>
+              <button className="font-medium text-lslate">Learn more -</button>
+            </div>
+            <div className="p-4 flex flex-col justify-center items-center">
+              <LuMonitorCog  className="text-5xl text-dyellow"/>
+              <p className="text-xl font-bold py-6">Bookkeeping Services</p>
+              <p className="pb-6 text-lg font-light text-center">Steering user behaviours with<br></br> creative design, data insights &<br></br>technology.</p>
+              <button className="font-medium text-lslate">Learn more -</button>
+            </div>
+          </div>
+          <button className="text-white bg-dblue p-4 px-6 rounded-md">See All Services</button>
+      </div>
+      <div>
+        <div></div>
       </div>
     </div>
   );
