@@ -163,7 +163,7 @@ export default function Home() {
           )}
         </div>
       </div>
-      <div className='bg-lgrey flex flex-col  items-center mt-24 pt-10 gap-y-12'>
+      <div className='bg-lgrey flex flex-col  items-center mt-24 pt-10 gap-y-12 pb-8'>
           <p className='uppercase text-dyellow text-lg'>welcome to registerkaro.in</p>
           <p className='md:text-4xl text-2xl font-bold text-lslate'>Explore Our Services</p>
           <div className="grid md:grid-cols-3 grid-cols-1 gap-x-52 gap-y-24">
@@ -206,8 +206,20 @@ export default function Home() {
           </div>
           <button className="text-white bg-dblue p-4 px-6 rounded-md">See All Services</button>
       </div>
-      <div>
-        <div></div>
+      <div className="flex">
+        <div className="md:w-1/2 w-full flex flex-col gap-y-8 pt-16 pl-10">
+          <p className="text-dyellow text-sm md:text-base">WELCOME TO REGISTERKARO.IN</p>
+          <p className="text-dblue font-bold md:text-3xl text-2xl">About <span className="text-dyellow">Register Karo</span></p>
+          <p className="md:text-lg text-sm">We have been using Intelegencia as our DevOps vendor for our field service
+            applications over the last couple of years and I’m extremely pleased with their performance, ability to
+            execute, and willingness to adapt in our ever changing environment. Perry is an
+            outstanding leader who is fanatical about customer satisfaction. He has built a solid team
+            which has consistently delivered on projects thereby exceeding everyone’s expectations.
+          </p>
+          <p className="md:text-lg text-sm">I would strongly recommend their services to any organization that is looking for solid, reliable, and predictable outcomes.</p>
+          <button className="bg-dblue text-white text-lg font-light md:px-6 md:py-3 py-1 rounded-md md:w-36 w-64">Learn More</button>
+        </div>
+        <div className="collapse md:visible"><img  src="/RegisterKaro.png" /></div>
       </div>
     </div>
   );
