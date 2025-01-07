@@ -207,7 +207,7 @@ export default function Home() {
           <button className="text-white bg-dblue p-4 px-6 rounded-md">See All Services</button>
       </div>
       <div className="flex">
-        <div className="md:w-1/2 w-full flex flex-col gap-y-8 pt-16 pl-10">
+        <div className="md:w-1/2 w-full flex flex-col gap-y-8 pt-16 md:pl-20 pl-10">
           <p className="text-dyellow text-sm md:text-base">WELCOME TO REGISTERKARO.IN</p>
           <p className="text-dblue font-bold md:text-3xl text-2xl">About <span className="text-dyellow">Register Karo</span></p>
           <p className="md:text-lg text-sm">We have been using Intelegencia as our DevOps vendor for our field service
@@ -221,6 +221,44 @@ export default function Home() {
         </div>
         <div className="collapse md:visible"><img  src="/RegisterKaro.png" /></div>
       </div>
+      <div className="flex pt-10 flex-col md:flex-row w-full">
+        <div className="md:w-1/2  flex flex-col md:pr-36 pr-4 gap-y-8 md:pl-20 pl-10">
+          <p className="text-dyellow uppercase">why registerkaro.in</p>
+          <p className="text-slate-900 md:text-3xl text-lg font-bold">Why Choose Register Karo</p>
+          <p className="pb-8 md:pb-0">It is with consistent services and results that build trust with the people and that in turn help us to serve the buisness better.</p>
+        </div>
+        <div className="grid md:grid-cols-2 grid-cols-1 md:gap-x-12 gap-y-4 md:gap-y-0 px-6">
+          <div className="md:px-12 md:py-14 p-4 rounded-lg flex flex-col justify-center items-center bg-lpink">
+            <LuMonitorCog className="text-3xl text-orange-700" />
+            <p className="pt-4 text-lg font-semibold">Confidential & Safe</p>
+            <p className="text-center text-slate-600 pt-2">All your private information is safe<br></br>with us</p>
+          </div>
+          <div className="md:px-12 md:py-14 p-4 rounded-lg flex flex-col justify-center items-center bg-lblue">
+            <LuMonitorCog className="text-3xl text-green-600" />
+            <p className="pt-4 text-lg font-semibold">No Hidden Fee</p>
+            <p className="text-center text-slate-600 pt-2">Everything is put before you with<br></br>no hidden charges or conditions</p>
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-end w-full md:pt-10 pt-4 pr-6">
+        <div className="grid md:grid-cols-3 grid-cols-1 md:gap-x-10 gap-y-4 md:gap-y-0">
+            <div className="md:px-12 md:py-12 p-4 rounded-lg flex flex-col justify-center items-center bg-lblue">
+              <LuMonitorCog className="text-3xl text-blue-700" />
+              <p className="pt-4 text-lg font-semibold">Guaranted Satisfaction</p>
+              <p className="text-center text-slate-600 pt-2">Everything is put before you with<br></br>no hidden charges or conditions</p>
+            </div>
+            <div className=" md:px-14 md:py-12 p-4 rounded-lg flex flex-col justify-center items-center bg-lpink">
+              <LuMonitorCog className="text-3xl text-red-700" />
+              <p className="pt-4 text-lg font-semibold">Expert CA/CS Assistance</p>
+              <p className="text-center text-slate-600 pt-2">Everything is put before you with<br></br>no hidden charges or conditions</p>
+            </div>
+            <div className="md:px-14 md:py-12 p-4  rounded-lg flex flex-col justify-center items-center bg-lblue">
+              <LuMonitorCog className="text-3xl text-dyellow" />
+              <p className="pt-4 text-lg font-semibold">Confidential & Safe</p>
+              <p className="text-center text-slate-600 pt-2">Everything is put before you with<br></br>no hidden charges or conditions</p>
+            </div>
+          </div>
+        </div>
     </div>
   );
 }

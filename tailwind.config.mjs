@@ -15,6 +15,8 @@ export default {
         "dpurple":"#1d4771",
         "lgrey":"#fafafa",
         "lslate":"#2a303a",
+        "lpink":"#e7d1c3",
+        "lblue":"#c9ccd0"
       },
     },
   },
