@@ -43,7 +43,7 @@ export default function Home() {
       }
       const data = await res.json();
 
-      if (data && data[0] && data[0].description && data[0].directors) {
+      if (data && data[0] && data[0].description && data[0].directors && data[0].name) {
         setSelectedCompany(data[0]); 
         setIsModalOpen(true);
       } else {
@@ -109,59 +109,60 @@ export default function Home() {
           <button className='bg-white p-4 rounded-xl'>Annual Compliance</button>
         </div>
       </div>
-      <div className='pt-16 flex flex-col justify-center items-center'>
-        <div className='text-2xl font-semibold'>Trusted By over 100+ Startup and freelance business</div>
-      </div>
-      {/* <h1 className="text-2xl font-bold mb-4">Company Information</h1>
+      <div className='md:pt-16 pt-8 flex flex-col justify-center items-center md:gap-y-8 gap-y-4'>
+        <div className='md:text-2xl text-base font-semibold'>
+          Trusted By over 100+ Startup and freelance business</div>
+        <div>
+        {loading && <p>Loading...</p>}
+        {error && <p className="text-red-500">{error}</p>}
 
-      {loading && <p>Loading...</p>}
-      {error && <p className="text-red-500">{error}</p>}
-
-      <div className="space-y-4">
-        {companies.map((company) => (
-          <div key={company.id} className="flex items-center justify-between">
-            <button
-              onClick={() => fetchCompanyDetails(company.id)}
-              className="bg-blue-500 text-white py-2 px-4 rounded"
-            >
-              {company.name === "Volkswagen" ? "Volks" : company.name === "Udemy" ? "U" : company.name}
-            </button>
-          </div>
-        ))}
-      </div>
-
-      {isModalOpen && selectedCompany && (
-        <div
-          id="modal-overlay"
-          onClick={handleOutsideClick}
-          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
-        >
-          <div className="bg-white p-8 rounded-lg w-1/2">
-            {selectedCompany.description && selectedCompany.directors ? (
-              <>
-                <h2 className="text-xl font-semibold">Company Information</h2>
-                <p>{selectedCompany.description}</p>
-                <h3 className="text-lg font-semibold mt-4">Directors:</h3>
-                <ul className="list-disc pl-5">
-                  {selectedCompany.directors.map((director, index) => (
-                    <li key={index} className="text-gray-600">
-                      {director}
-                    </li>
-                  ))}
-                </ul>
-              </>
-            ) : (
-              <p className="text-red-500">Error: Missing company data</p>
-            )}
-            <button
-              onClick={handleCloseModal}
-              className="mt-4 bg-red-500 text-white py-2 px-4 rounded"
-            >
-              Close
-            </button>
-          </div>
+        <div className="flex md:gap-x-10 gap-x-6">
+          {companies.map((company) => (
+            <div key={company.id} className="flex items-center justify-between">
+              <button
+                onClick={() => fetchCompanyDetails(company.id)}
+                className="md:w-20 w-12 h-20"
+              >
+                {company.name === "Volkswagen" ? <img className='rounded-full' src="/volkswagen.jpeg" /> : company.name === "Udemy" ? <img className='rounded-full' src="/udemy.png" /> : <img className='rounded-full' src="/pintrest.png" />}
+              </button> 
+            </div>
+          ))}
         </div>
-      )} */}
+
+          {isModalOpen && selectedCompany && (
+            <div
+              id="modal-overlay"
+              onClick={handleOutsideClick}
+              className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+            >
+              <div className="bg-white md:p-8 p-4 rounded-lg md:w-1/2 w-2/3 flex flex-col justify-center items-center" >
+                {selectedCompany.description && selectedCompany.directors ? (
+                  <>
+                    <h2 className="md:text-xl text-sm font-semibold">About {selectedCompany.name}  </h2>
+                    <p className='text-xs md:text-base'>{selectedCompany.description}</p>
+                    <h3 className="md:text-lg text-xs font-semibold mt-4">Directors:</h3>
+                    <ul className="list-disc md:pl-5 pl-1 text-sm md:text-base">
+                      {selectedCompany.directors.map((director, index) => (
+                        <li key={index} className="text-gray-600">
+                          {director}
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <p className="text-red-500">Error: Missing company data</p>
+                )}
+                <button
+                  onClick={handleCloseModal}
+                  className="mt-4 bg-red-500 text-white py-2 px-4 rounded"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

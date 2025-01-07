@@ -30,7 +30,8 @@ export async function GET(request, context) {
     const responseData = [
       {
         description: company.description,
-        directors: directors
+        directors: directors,
+        name:company.name
       }
     ];
 
