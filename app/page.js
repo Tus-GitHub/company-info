@@ -1,6 +1,10 @@
 'use client';
 
 import { LuMonitorCog } from "react-icons/lu";
+import { FaFacebook } from "react-icons/fa";
+import { FaApple } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 import { useState, useEffect, useCallback } from 'react';
 
 export default function Home() {
@@ -72,10 +76,9 @@ export default function Home() {
         <div className='border-r-2  pr-2 md:pr-5 mr-2 border-white'>www.registerkaro.in</div>
         <div className='border-r-2 pr-2 md:pr-5 mr-2 border-white'>+918447746183</div>
         <div className='flex gap-1 md:gap-4 md:pr-16 pr-4'>
-          <p>I</p>
-          <p>F</p>
-          <p>T</p>
-          <p>P</p>
+          <FaFacebook className="text-lg hover:text-dyellow" />
+          <FaGoogle className="text-lg hover:text-dyellow" />
+          <FaApple className="text-lg hover:text-dyellow" />
         </div>
       </div>
       <div className='border-b-2 border-slate-100 h-16 justify-between flex items-center'>  
@@ -87,12 +90,12 @@ export default function Home() {
             <button>Blog</button>
             <button>Contact Us</button>
             <button>About Us</button>
-            <button>Sea</button>
+            <button><FaSearch className="text-lg"/></button>
         </div>
         <button className='bg-dyellow md:p-3 p-1 font-thin  md:font-medium md:pl-6 md:pr-6 pl-2 pr-2 text-white rounded-lg'>Talk An Expert</button>
         </div>
       </div>
-      <div className="h-[80vh] w-screen m-0 p-0 bg-[url('/working-man.avif')] bg-no-repeat bg-cover bg-center flex justify-between">
+      <div className="h-[80vh] w-screen m-0 p-0 bg-[url('/working.avif')] bg-no-repeat bg-cover bg-center flex justify-between">
         <div className='md:pl-20 pl-4 py-8 flex flex-col justify-around'>
           <div className='font-medium text-xs md:text-base'>Google Rating</div>
           <p className='md:text-5xl text-base font-medium'>Your trusted partner<br></br> for compliance buisness needs</p>
@@ -135,15 +138,15 @@ export default function Home() {
               onClick={handleOutsideClick}
               className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
             >
-              <div className="bg-white md:p-8 p-4 rounded-lg md:w-1/2 w-2/3 flex flex-col justify-center items-center" >
+              <div className="bg-gradient-to-r from-dyellow from-5% via-lpink via-30% to-dblue to-95% md:p-8 p-4 rounded-lg md:w-1/2 w-2/3 flex flex-col justify-center items-center" >
                 {selectedCompany.description && selectedCompany.directors ? (
                   <>
-                    <h2 className="md:text-xl text-sm font-semibold">About {selectedCompany.name}  </h2>
+                    <h2 className="md:text-xl text-sm font-bold text-lslate">About <span className="text-dpurple">{selectedCompany.name} </span> </h2>
                     <p className='text-xs md:text-base'>{selectedCompany.description}</p>
                     <h3 className="md:text-lg text-xs font-semibold mt-4">Directors:</h3>
                     <ul className="list-disc md:pl-5 pl-1 text-sm md:text-base">
                       {selectedCompany.directors.map((director, index) => (
-                        <li key={index} className="text-gray-600">
+                        <li key={index} className="text-gray-900">
                           {director}
                         </li>
                       ))}
@@ -240,7 +243,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex justify-end w-full md:pt-10 pt-4 pr-6">
+      <div className="flex justify-end w-full md:pt-10 pt-4 pr-6 pb-10">
         <div className="grid md:grid-cols-3 grid-cols-1 md:gap-x-10 gap-y-4 md:gap-y-0">
             <div className="md:px-12 md:py-12 p-4 rounded-lg flex flex-col justify-center items-center bg-lblue">
               <LuMonitorCog className="text-3xl text-blue-700" />
@@ -259,6 +262,84 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <footer className="bg-blue-900 text-white pt-12 pb-8">
+          <div className="container mx-auto px-3  md:px-16">
+            <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8 gap-x-8 text-sm">
+              <div className="col-span-2">
+                <p className="mb-6">
+                  Design outstanding interfaces with advanced Figma features in a matter of minutes.
+                </p>
+                <div className="flex space-x-8">
+                  <FaFacebook className="text-lg hover:text-dyellow" />
+                  <FaGoogle className="text-lg hover:text-dyellow" />
+                  <FaApple className="text-lg hover:text-dyellow" />
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="font-bold text-dyellow">START A BUSINESS</h4>
+                <ul className="space-y-2">
+                  <li>Features</li>
+                  <li>Solutions</li>
+                  <li>Integrations</li>
+                  <li>Enterprise</li>
+                  <li>Solutions</li>
+                </ul>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="font-bold text-dyellow">GOVERNMENT REGISTRATION</h4>
+                <ul className="space-y-2">
+                  <li>Partners</li>
+                  <li>Community</li>
+                  <li>Developers</li>
+                  <li>App</li>
+                  <li>Blog</li>
+                </ul>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="font-bold text-dyellow text-xs md:text-base">COMPLIANCE & TAX</h4>
+                <ul className="space-y-2">
+                  <li>Channels</li>
+                  <li>Scale</li>
+                  <li>Watch the Demo</li>
+                  <li>Our Competition</li>
+                </ul>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="font-bold text-dyellow">BIS & CDSCO</h4>
+                <ul className="space-y-2">
+                  <li>About Us</li>
+                  <li>News</li>
+                  <li>Leadership</li>
+                  <li>Media Kit</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center mt-12">
+              <button className="bg-dyellow text-blue-900 rounded-full p-3 mb-6 hover:bg-yellow-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 15.75L12 8.25l-7.5 7.5"
+                  />
+                </svg>
+              </button>
+              <p className="text-sm">© 2024 Registerkaro.in. All Rights Reserved.</p>
+            </div>
+          </div>
+      </footer>
     </div>
   );
 }
