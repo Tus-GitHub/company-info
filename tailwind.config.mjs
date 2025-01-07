@@ -14,6 +14,9 @@ export default {
         "dyellow":"#ffa229",
         "dpurple":"#1d4771",
       },
+      backgroundImage: {
+        'footer-texture': "url('/Screenshot 2025-01-07 050652.png')",
+      },
     },
   },
   plugins: [],
