@@ -6,7 +6,7 @@ async function getCompaniesData() {
   let error = null;
 
   try {
-    const res = await fetch('http://localhost:3000/api/companiess', { cache: 'no-store' });
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/companies`, { cache: 'no-store' });
     if (!res.ok) {
       throw new Error('Failed to fetch companies');
     }

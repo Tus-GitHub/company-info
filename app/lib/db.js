@@ -1,7 +1,7 @@
 import { Pool } from 'pg'; 
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  connectionString: process.env.NEXT_PUBLIC_DATABASE_URL,
 });
 
 export const query = async (text, params) => {

@@ -15,7 +15,7 @@ export default function CompanyList({ companies, error }) {
     setLocalError(null);
 
     try {
-      const res = await fetch(`http://localhost:3000/api/companies/${companyId}`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/companies/${companyId}`);
       if (!res.ok) {
         throw new Error('Failed to fetch company details');
       }
